@@ -1,0 +1,57 @@
+.notFound {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .notFound-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: $color-3;
+    border-radius: 100%;
+ 
+   
+   h1{
+    padding-bottom: 30px;
+   
+   }
+
+   i{
+    margin-left: 10px;
+   }
+ 
+    
+  }
+
+  h2 {
+    font-size: 4rem;
+    padding: 2rem;
+
+    &:after {
+      content: "";
+      height: 500px;
+      width: 500px;
+      background: $color-3;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    transition: 0.4s;
+    padding: 10px;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
