@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { projectsData } from '../data/projectsData'
 
 const Project = ({ projectNumber }) => {
     const [currentProject] = useState(projectsData[projectNumber])
-    console.table(currentProject)
+  
     return (
         <div className='project-main'>
             <div className="project-content">
@@ -26,13 +26,13 @@ const Project = ({ projectNumber }) => {
                     </span>
                     <img src={currentProject.img} alt={currentProject.title} className='img' />
                 </div>
-                {/* <div className="button-container">
-                    <a href={currentProject.link} target='_blank' ref='noopener noreferrer' className='hover'>
+                <div className="button-container">
+                    <a href={currentProject.link} target='_blank' className='hover'>
                         <span className='button'>Voir le site</span>
                     </a>
-                </div> */}
+                </div>
             </div>
-
+          
         </div>
     );
 };

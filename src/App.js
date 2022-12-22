@@ -6,12 +6,14 @@ import Contact from './pages/Contact';
 import Project1 from './pages/Project1';
 import Project2 from './pages/Project2';
 import Project3 from './pages/Project3';
-
+import { AnimatePresence } from 'framer-motion';
 import NotFound from './pages/NotFound';
+
 
 const App = () => {
   return (
     <BrowserRouter>
+    <AnimatePresence>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/project-1' element={<Project1/>}/>
@@ -21,6 +23,7 @@ const App = () => {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
+      </AnimatePresence>
     </BrowserRouter>
   );
 };
